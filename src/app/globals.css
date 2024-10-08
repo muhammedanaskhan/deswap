@@ -3,16 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0C0D0E;
+  --foreground: #ffffff;
+  --primary: #CBF947;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   color: var(--foreground);
@@ -24,4 +19,49 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+/* hamburger*/
+
+/* two line hamburger */
+
+#nav-icon2 {
+  width: 16px;
+  height: 8px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon2 span {
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: white;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+#nav-icon2 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon2 span:nth-child(2) {
+  top: 6px;
+}
+
+#nav-icon2.open span:nth-child(1) {
+  top: 3px;
+  transform: rotate(45deg);
+}
+
+#nav-icon2.open span:nth-child(2) {
+  top: 3px;
+  transform: rotate(-45deg);
 }

@@ -11,6 +11,10 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "var(--primary)",
+      },
+      screens: {
+        'ds': '1330px', // Custom small screen (like xs in Bootstrap)
       },
     },
   },
